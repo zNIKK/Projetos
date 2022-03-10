@@ -25,13 +25,14 @@ body {
 
     margin: auto;
     max-width: 320px;
+    min-width: 300px;
     border-radius: 10px;
     background-color: hsl(216, 50%, 16%);
 }
 
 h1 {
     font-size: 24px;
-    color: hsl(178, 100%, 50%);
+    color: white;
 }
 
 img {
@@ -39,6 +40,14 @@ img {
     border-radius: 20px;
     width: 300px;
     margin: auto;
+}
+
+.avatar {
+    border: 1px solid white;
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+    width: 40px;
 }
 
 .ico {
@@ -50,12 +59,12 @@ img {
 
 .left {
     display: inline-block;
-    color: hsl(178, 100%, 50%);
+    color: white;
     font-weight: 600;
 }
 
 .right {
-    display: inline-block;
+    display: inline;
     float: right;
 }
 
@@ -65,15 +74,29 @@ hr {
 }
 
 a{
+    color: white;
+    text-decoration: none;
     padding: 0px;
 }
 
+a:hover {
+    color: hsl(178, 100%, 50%);
+
+}
+
 .attribution {
+    text-align: center;
+    margin: auto;
     position: absolute;
-    top: 98%;
-    left: 50%;
-    transform: translate(-50%,-98%);
+    left: -50%;
+    right: -50%;    
+    bottom: 0;
 
 
+}
+
+div.containerFooter {  /* DEIXAR O TEXTO NO MEIO VERTICALMENTE */
+    display: flex;
+    justify-content: flex-start;
 
 }
