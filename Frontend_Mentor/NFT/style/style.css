@@ -9,7 +9,6 @@
 }
 
 body {
-    
     background-color: hsl(217, 54%, 11%);
 }
 
@@ -34,16 +33,52 @@ h1 {
     font-size: 24px;
     color: white;
 }
+.BGmain {
+    position: absolute;
+    top: 3.3%;
+    left: 6%;
+    border-radius: 20px;
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    z-index: 1;
 
-img {
+}
+
+
+.mainIMG {
+    position: relative;
     display: block;
     border-radius: 20px;
     width: 300px;
     margin: auto;
+
 }
+
+.viewIMG {
+    position: absolute;
+    top: 20%;
+    left: 36%;
+    width: 80px;
+    opacity: 0;
+    z-index: 1;
+
+}
+.BGmain:hover {
+    opacity: 1;
+}
+
+
+
+.BGmain:hover ~ .viewIMG{
+    opacity: 1;
+}
+
 
 .avatar {
     border: 1px solid white;
+    border-radius: 50%;
     padding: 0px;
     margin: 0px;
     display: inline;
