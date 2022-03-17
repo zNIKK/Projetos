@@ -53,28 +53,29 @@ h1 {
     border-radius: 20px;
     width: 300px;
     margin: auto;
-
+    z-index: 1;
 }
 
 .viewIMG {
     position: absolute;
-    top: 20%;
-    left: 36%;
+    padding:0px;
+    top: 30%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    display: inline;
     width: 80px;
     opacity: 0;
-    z-index: 1;
-
 }
-.BGmain:hover {
+
+
+.viewIMG:hover {
     opacity: 1;
 }
 
-
-
-.BGmain:hover ~ .viewIMG{
+.viewIMG:hover ~ .BGmain {
     opacity: 1;
 }
-
 
 .avatar {
     border: 1px solid white;

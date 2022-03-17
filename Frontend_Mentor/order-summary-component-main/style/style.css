@@ -1,0 +1,14 @@
+body {
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    background-color: white;
+    max-width:  400px;
+}
+
+.mainIMG {
+    display: block;
+}
