@@ -64,7 +64,6 @@ h1 {
     width: 300px;
     height: 300px;
     margin: auto;
-<<<<<<< HEAD
     z-index: 1;
 }
 
@@ -89,8 +88,6 @@ h1 {
     opacity: 1;
 }
 
-=======
-}
 
 /* Ativar hover ao mesmo tempo */
 
@@ -102,7 +99,6 @@ h1 {
     opacity: 1;
 }
 
->>>>>>> 7bad26d7d9ac4e5346739646f51e4448e29cdee4
 .avatar {
   border: 1px solid white;
   border-radius: 50%;
