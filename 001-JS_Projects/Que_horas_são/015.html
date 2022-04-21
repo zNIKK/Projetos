@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que horas são?</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1 id='title'>Titulo</h1>
+    </header>
+    <section>
+        <div id='par'>
+            <p>paragrafo</p>
+        </div>
+        <div id='pixelart'>
+            <img id='image' src="" alt="imagem">
+        </div>
+    </section>
+    <footer>
+        <p id='copr'>&copy; SrGandolfi</p>
+    </footer>
+    <script>
+        var d = new Date()
+        var h = d.getHours()
+        var t = document.getElementById('title');
+        var p = document.getElementById('par');
+        var img = document.getElementById('image');
+        var c = document.getElementById('copr');
+        console.log(h)
+        if (h <= 12 && h > 0) {
+            t.style.color = 'black'
+            t.innerHTML = 'Bom dia'
+            document.body.style.background = 'rgb(255, 234, 182)'
+            p.innerHTML = `Agora são ${h} horas`
+            img.src = 'images/e842a10c4d2d097abec3caf62c3ec606.png'
+        } else if (h <= 18) {
+            t.style.color = 'black'
+            t.innerHTML = 'Boa tarde'
+            document.body.style.background = 'rgb(229, 194, 147)'
+            p.innerHTML = `Agora são ${h} horas`
+            img.src = 'images/paris_evening.png';
+        } else {
+            t.innerHTML = 'Boa noite'
+            document.body.style.background = 'rgb(24, 24, 24)'
+            p.innerHTML = `Agora são ${h} horas`
+            img.src = 'images/af83590e61b42aeec2a5400a3124538d.png';
+            copr.style.color = 'white'
+
+        }
+    </script>
+</body>
+</html>
