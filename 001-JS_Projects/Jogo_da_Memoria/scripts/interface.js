@@ -53,7 +53,7 @@ function flipCard() {
                     let gameOverLayer = document.getElementById('gameOver')
                     gameOverLayer.style.display = 'flex'
                     let divTry = document.createElement("div");
-                    divTry.innerHTML = game.rec + 'º Tentativa' 
+                    divTry.innerHTML = game.rec + 'º Tentativa  ' 
                     gameOverLayer.appendChild(divTry)
                 };
             } else {

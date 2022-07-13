@@ -6,6 +6,14 @@ body {
     margin: auto;
 }
 
+.curtain {
+    display: none;
+}
+.responsive_menu {
+    display: none;
+    
+}
+
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -163,7 +171,7 @@ main {
     background-color: rgb(241, 241, 241);
     padding: 15px;
     border: none;
-    z-index: 0;
+    z-index: -1;
     cursor: pointer;
 }
 
@@ -199,6 +207,8 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 10px;
     box-shadow: 1px 10px 15px rgba(255, 68, 0, 0.185);
     width: 250px;
+    cursor: pointer;
+
 
 }
 
@@ -207,12 +217,74 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 1000px) {
-    .nav {
-
-    }
 
     .list{
-        display:none;
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        font-weight: bold;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 200px;
+        height: 180px;  
     }
+
+    .list > a > li {
+        color: black;
+        
+
+    }
+
+    .list > a {
+        padding-left: 10px;
+        height:100%
+    }
+
+    .list > a:hover {
+        border-bottom: none;
+        border-left: solid 6px orangered;
+        transition: 0.2s;
+    }
+    
+    .appear {
+        display: flex;
+        z-index: 1;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .responsive_menu {
+        display: block;
+        border: 0px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: white;
+    }
+
+    .curtain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        opacity: 0.8;
+    }
+
+    
+
     
 }
