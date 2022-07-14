@@ -1,16 +1,22 @@
 let icon_menu = '<img src="images/icon-menu.svg">'
+
+
+$(".menu").remove();
 $(".left").append("<div class='menu'></div>")
 
 
+console.log($(".menu").html())
+
 $(".responsive_menu").click(() => {
     $(".list_copia").remove()
-    
+
     let menu = $(".menu");
 
 
     if ($(".responsive_menu").html() == icon_menu) { 
 
         $(".responsive_menu").html("<img src='images/icon-close.svg'></img>");
+
     
     } else {
         $(".responsive_menu").html("<img src='images/icon-menu.svg'>");
