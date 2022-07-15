@@ -24,7 +24,6 @@ $(".responsive_menu").click(() => {
     }
 
     menu.animate({height: 'toggle'},200,() => {
-        menu.toggleClass("active_menu");
 
         menu.append('<ul class="list_copia"><a href="*"><li>Collections</li></a><a href="*"><li>Men</li></a><a href="*"><li>Women</li></a><a href="*"><li>About</li></a><a href="*"><li>Contact</li></a></ul>');
         $(".list_copia").toggleClass("appear");
@@ -33,4 +32,5 @@ $(".responsive_menu").click(() => {
 
     $(".curtain").toggleClass("close");
 })
+
 

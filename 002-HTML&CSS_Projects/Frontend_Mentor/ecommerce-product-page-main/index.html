@@ -59,14 +59,16 @@
       <button class="button_avatar"><img class="avatar" src="images/image-avatar.png" alt=""></button>
     </div>
   </nav>
-
   <main>
 
     <div class="images">
       <img class="main_image" src="images/image-product-1.jpg" alt="">
       
       <div class="thumbnails">
-
+        <button class="thumbnail"><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
+        <button class="thumbnail"><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
+        <button class="thumbnail"><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
+        <button class="thumbnail"><img  src="images/image-product-4-thumbnail.jpg" alt=""></button>
       </div>
     </div>
     <div class="content">
@@ -78,22 +80,24 @@
           durable rubber outer sole, they’ll with stand everything the weather can offer.
         </p>
       </div>
+
       <div class="values">
-        <div class="main_value">$125.00</div>
+        <div class="main_value">$<span id="price">125.00</span></div>
         <div class="discount">50%</div>
       </div>
       <div class="old_value">$250.00</div>
+
       
 
 
       <div class="inputs">
         <div class="label_amount">
           <button id="min_b"><img src="images/icon-minus.svg" alt=""></button>  
-          <input type="number" min="0" value="0"
+          <input type="number" min="0" value="1"
           id="amount"></input>
           <button id="max_b"><img src="images/icon-plus.svg" alt=""></button>
         </div>
-        <button id="button_add"> Add to cart</input>
+        <button id="button_add"><img class="icon_cart" src="images/icon-cart-white.svg" alt=""> Add to cart</input>
       </div>
       
     </div>
@@ -109,6 +113,7 @@
   <script src="script/buttons_max_min.js"></script>
   <script src="script/nav.js"></script>
   <script src="script/cart_popup.js"></script>
+  <script src="script/switch_images.js"></script>
 </body>
 
 </html>
