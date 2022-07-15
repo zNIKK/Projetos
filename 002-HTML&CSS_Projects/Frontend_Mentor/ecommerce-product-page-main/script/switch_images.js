@@ -1,5 +1,7 @@
-console.log($(".thumbnails"));
 
-$(".thumbnails").forEach((thumb) => {
-    console.log(thumb);
+let tumb = [$(".thumbnails").html()]
+tumb.forEach((element) => {
+    $(element).attr("id", function (i, orig) {
+        return orig 
+    });
 });
