@@ -1,7 +1,14 @@
 
-let tumb = [$(".thumbnails").html()]
-tumb.forEach((element) => {
-    $(element).attr("id", function (i, orig) {
-        return orig 
-    });
+let thumb = $(".thumbnail").get();
+a = []
+thumb.forEach(element => {
+    $(element).click(() => {
+        $(element).children().toggleClass("on")
+        console.log($(element).attr("class"));
+
+    })
+    console.log($(element).attr("class"));
+
 });
+
+    

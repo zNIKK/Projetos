@@ -180,6 +180,7 @@ body {
 }
 
 main {
+    position: relative;
     display:flex;
     margin: auto;
     justify-content: space-between;
@@ -197,7 +198,6 @@ main {
     height: 450px;
 }
 .main_image {
-    position: relative;
     border-radius: 10px;
     width: 100%;
 
@@ -207,17 +207,31 @@ main {
     display: flex;
     justify-content: space-between;
 }
+.thumbnails > button {
 
+    border-radius: 10px;
+}
 .thumbnail {
     border: none;
     background-color: white;
     padding: 0px;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .thumbnail > img {
+    position: relative;
     border-radius: 10px;
     width: 70px;
 
+}
+
+.on {
+    display: inline;
+    position: absolute;
+    border: solid 2px orangered;
+    border-radius: 10px;
+    padding: 1px;
 }
 
 
