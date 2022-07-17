@@ -4,7 +4,6 @@
 
 body {
     margin: auto;
-    height: 100vh;
 }
 
 .curtain {
@@ -29,8 +28,9 @@ body {
 
 .left {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width:  600px;
     height: 100%;
 }
 
@@ -107,7 +107,9 @@ body {
 .list_copia {
     display: none;
 }
-
+.logo {
+    padding: 0px;
+}
 .cart_popup {
     box-sizing: border-box;
     display: none;
@@ -199,21 +201,15 @@ main {
 }
 
 .div_image {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
     position: relative;
-    z-index: 2;
+}
+.button_left > img, .button_right > img {
+    width: 25%;
+    height: 25%;
 }
 
-.div_image:  {
-    background-color: red;
-    
-}
-
-
-.button_left {
-
+.button_left, .button_right{
+    display: none;
     border-radius: 100%;
     background-color: white;
     width: 60px;
@@ -221,28 +217,18 @@ main {
     padding: 0px;
     border: 0px;
     position: absolute;
-    left: 10px;
     top: 50%;
 
     transform: translate(0%,-50%);
     cursor: pointer;
+}
+
+.button_left {
+    left: 5%;
 }
 
 .button_right {
-    opacity: 0;
-    border-radius: 100%;
-    background-color: white;
-    width: 60px;
-    height: 60px;
-    padding: 0px;
-    border: 0px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-
-    transform: translate(0%,-50%);
-    cursor: pointer;
-
+    right: 5%;
 }
 
 
@@ -414,15 +400,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 .attribution {
     position: absolute;
-    bottom: 0%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50% , 0%);
 }
 
 @media screen and (max-width: 900px) {
     body {
         overflow-x: hidden;
         height: 1100px;
+        width: 100vw;
     }
 
     .nav {
@@ -512,10 +498,12 @@ input[type=number]::-webkit-outer-spin-button {
         z-index: 1;
         opacity: 0.8;
     }
-
+    .left {
+        justify-content: center;
+    }
     main {
         display: flex;
-        width: 70vw;
+        width: 100vw;
         flex-direction: column;
         height: auto;
     }
@@ -529,11 +517,21 @@ input[type=number]::-webkit-outer-spin-button {
         display: none;
     }
 
+    .div_image {
+        width: 100%;
+    }
+
     .main_image {
         border-radius: 0px;
-        width:auto;
-        height: 500px;
-        z-index: -1;
+    }
+
+    .div_image:() {
+        background-color: black;
+    }
+
+    .button_left, .button_right {
+        z-index: 0;
+        display: block;
     }
 
     .content {
