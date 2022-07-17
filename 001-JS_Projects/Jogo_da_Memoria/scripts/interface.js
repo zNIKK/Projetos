@@ -42,6 +42,22 @@ function createCardsFromTechs(techs) {
 }
 
 
+<<<<<<< HEAD
+=======
+function createCardFace(face, card, element) {
+    let cardElementFace = document.createElement('div');
+    cardElementFace.classList.add(face);
+    if(face === FRONT) {
+        let iconElement = document.createElement('img')
+        iconElement.classList.add(ICON)
+        iconElement.src = "/001-JS_Projects/Jogo_da_Memoria/images/" + card.icon + ".png"
+        cardElementFace.appendChild(iconElement);
+    } else {
+        cardElementFace.innerHTML = '&lt/&gt';
+    }
+    element.appendChild(cardElementFace);
+}
+>>>>>>> 6d17033c7ae26051a8ce5cffc6ffb7cabc057591
 
 function createPairFromTech(tech) {
 
