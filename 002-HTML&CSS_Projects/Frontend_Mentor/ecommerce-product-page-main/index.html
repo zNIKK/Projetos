@@ -62,13 +62,16 @@
   <main>
 
     <div class="images">
-      <img class="main_image" src="images/image-product-1.jpg" alt="">
-      
+      <div class="div_image">
+        <button class="button_left"><img src="images/icon-previous.svg"></button>
+        <img class="main_image" src="images/image-product-1.jpg" alt="">
+        <button class="button_right"><img src="images/icon-next.svg"></button>
+      </div>
       <div class="thumbnails">
-        <button class="thumbnail" id="thumb1"> <img src="images/image-product-2-thumbnail.jpg" alt=""></button>
-        <button class="thumbnail" id="thumb2"> <img src="images/image-product-3-thumbnail.jpg" alt=""></button>
-        <button class="thumbnail" id="thumb3"> <img src="images/image-product-1-thumbnail.jpg" alt=""></button>
-        <button class="thumbnail" id="thumb4"> <img src="images/image-product-4-thumbnail.jpg" alt=""></button>
+        <button class="thumbnail" id="1"> <img src="images/image-product-2-thumbnail.jpg" alt=""></button>
+        <button class="thumbnail" id="2"> <img src="images/image-product-3-thumbnail.jpg" alt=""></button>
+        <button class="thumbnail" id="3"> <img src="images/image-product-1-thumbnail.jpg" alt=""></button>
+        <button class="thumbnail" id="4"> <img src="images/image-product-4-thumbnail.jpg" alt=""></button>
       </div>
     </div>
     <div class="content">
@@ -114,6 +117,12 @@
   <script src="script/nav.js"></script>
   <script src="script/cart_popup.js"></script>
   <script src="script/switch_images.js"></script>
+
+
+  <!--
+    <img src="images/image-product-2-thumbnail.jpg">
+    <img src="images/image-product-2.jpg">
+  -->
 </body>
 
 </html>
