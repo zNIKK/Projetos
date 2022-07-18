@@ -208,6 +208,7 @@ main {
 
 
 .button_left {
+    display: none;
 
     border-radius: 100%;
     background-color: white;
@@ -224,7 +225,7 @@ main {
 }
 
 .button_right {
-    opacity: 0;
+    display: none;
     border-radius: 100%;
     background-color: white;
     width: 60px;
@@ -529,6 +530,9 @@ input[type=number]::-webkit-outer-spin-button {
         width:auto;
         height: 500px;
         z-index: -1;
+    }
+    .button_left, .button_right {
+        display: block;    
     }
 
     .content {
