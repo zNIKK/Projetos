@@ -1,26 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
+const FRONT = 'card_front'
+const BACK = 'card_back'
 
-    let squares = document.querySelectorAll(".square")
+let techs = ['bootstrap',
+    'css',
+    'electron',
+    'firebase',
+    'html',
+    'javascript',
+    'jquery',
+    'mongo',
+    'node',
+    'react'];
 
-    squares.forEach((square) =>{
-        square.addEventListener('click', click)
-    })
-    
-})
+startGame();
 
-function click(event) {
-    console.log(event.target);
-    updateImages();
+function startGame() {
+    let cards = createCardsFromTechs(techs);
 }
 
-function updateImages() {
+function shuffleCards(cards) {
+    let currentIndex = cards.length;
+    let randomIndex = 0;
 
-    let squares = document.querySelectorAll(".square")
+    while(currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random * currentIndex);
+        currentIndex--;
 
-    squares.forEach((square) => {
-        square.toggleAttribute('special')
-        
-        // square.innerHTML = `<img src="../Jogo_da_Memoria/images/bootstrap.png"></img>`
-        
-    })
+        [cards[randomIndex],[cards]]
+
+    }
+}
+
+function createCardsFromTechs(techs) {
+    let cards = [];
+
+    for(let tech of techs){
+        cards.push(createPairFromTech(tech));
+    }
+    return cards.flatMap(pair => pair);
+
+}
+
+
+
+function createPairFromTech(tech) {
+
+    return [{
+        id: createIdWithTech(tech),
+        icon: tech,
+        flipped: false,
+    },{
+        id: createIdWithTech(tech),
+        icon: tech,
+        flipped: false,
+    }]
+} 
+
+function createIdWithTech(tech) {
+    return tech + parseInt(Math.random() * 1000)
 }
