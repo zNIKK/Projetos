@@ -8,10 +8,10 @@ thumb.forEach(element => {
     $(element).click(() => {
         let id = $(element).attr("id")
         $(element).children().toggleClass("on")
+        $(".main_image").attr("src", src = "images/image-product-"+ id +".jpg" );
 
     })
     console.log($(element).children().attr("class"));
-
 });
 
 $(".thumbnail").children().click(() => {
