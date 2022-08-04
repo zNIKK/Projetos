@@ -82,7 +82,7 @@ function createCardFace(face, card, element) {
     if(face === FRONT) {
         let iconElement = document.createElement('img')
         iconElement.classList.add(ICON)
-        iconElement.src = "/Projetos/001-JS_Projects/Jogo_da_Memoria/images/" + card.icon + ".png"
+        iconElement.src = "/001-JS_Projects/Jogo_da_Memoria/images/" + card.icon + ".png"
         cardElementFace.appendChild(iconElement);
     } else {
         cardElementFace.innerHTML = '&lt/&gt';
