@@ -3,16 +3,18 @@ let thumb = $(".thumbnail").get();
 a = []
 let count_images = 1
 
-
+$("#1").children().addClass("on")
 thumb.forEach(element => {
     $(element).click(() => {
-        let id = $(element).attr("id")
         $(element).children().toggleClass("on")
+        let id = $(element).attr("id")
         $(".main_image").attr("src", src = "images/image-product-"+ id +".jpg" );
 
     })
     console.log($(element).children().attr("class"));
 });
+
+
 
 $(".thumbnail").children().click(() => {
     $(".thumbnail").children().removeClass("on")

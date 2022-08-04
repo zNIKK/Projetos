@@ -10,9 +10,10 @@ body {
 .curtain {
     display: none;
 }
-.responsive_menu {  
+
+.responsive_menu {
     display: none;
-    
+
 }
 
 
@@ -24,7 +25,7 @@ body {
     height: 80px;
     border-bottom: solid 1px gray;
     width: 100%;
-    
+
 }
 
 .left {
@@ -42,10 +43,17 @@ body {
     justify-content: space-between;
 }
 
-.button_avatar , .button_cart {
+.button_avatar,
+.button_cart {
+
+    position: relative;
     background-color: white;
     border: none;
     cursor: pointer;
+}
+
+.button_avatar {
+    width: 80px;
 }
 
 .button_cart {
@@ -57,10 +65,10 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
-    background-color: orangered;
+    background-color: hsl(26, 100%, 55%);
     color: white;
     border-radius: 40%;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 10px;
     width: 18px;
     height: 13px;
@@ -71,8 +79,15 @@ body {
 }
 
 .avatar {
+    border-radius: 100%;
+    padding: 2px;
     width: 50px;
 }
+
+.avatar:active {
+    border: solid 3px hsl(26, 100%, 55%);
+}
+
 
 .list {
     display: flex;
@@ -85,11 +100,11 @@ body {
     list-style: none;
 }
 
-.list > li {
+.list>li {
     display: inline;
 }
 
-.list > a {
+.list>a {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -99,8 +114,8 @@ body {
     font-weight: 600;
 }
 
-.list > a:hover {
-    border-bottom: solid 6px orangered;
+.list>a:hover {
+    border-bottom: solid 6px hsl(26, 100%, 55%);
     transition: 0.2s;
 }
 
@@ -112,13 +127,14 @@ body {
     box-sizing: border-box;
     display: none;
     position: absolute;
-    top: 10px;
-    right: 0px;
+    top: 90px;
+    right: 270px;
     width: 340px;
     height: 230px;
     border-radius: 10px;
     background: white;
     box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.171);
+    z-index: 3;
 }
 
 .title_popup {
@@ -153,20 +169,21 @@ body {
     align-items: center;
 }
 
-.product_popup > img {
+.product_popup>img {
     border-radius: 10px;
     height: 50px;
     width: 50px;
 }
 
-.text_product > h1, .text_product > p{
+.text_product>h1,
+.text_product>p {
     font-weight: 500;
     margin: 0px;
     font-size: 14px;
 }
 
 .checkout_button {
-    background-color: orangered;
+    background-color: hsl(26, 100%, 55%);
     font-weight: bold;
     color: white;
     font-size: 16px;
@@ -176,19 +193,31 @@ body {
     width: 80%;
     height: 40px;
 
-    cursor: pointer;   
+    cursor: pointer;
+}
+
+.checkout_button:hover {
+    background-color: rgb(255, 138, 95);
+
+}
+
+.checkout_button:active {
+    transform: translateY(5px);
+    background-color: rgb(255, 138, 95);
+    box-shadow: 1px 5px 15px rgba(255, 68, 0, 0.185);
 }
 
 main {
     position: relative;
-    display:flex;
+    display: flex;
     margin: auto;
     justify-content: space-between;
     align-items: center;
     width: 900px;
-    height: 500px;
+    height: 90%;
 
 }
+
 .images {
     display: flex;
     flex-direction: column;
@@ -199,8 +228,6 @@ main {
 }
 
 .div_image {
-    width: 100%;
-    height: 100%;
     opacity: 1;
     position: relative;
     z-index: 2;
@@ -220,7 +247,7 @@ main {
     left: 10px;
     top: 50%;
 
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     cursor: pointer;
 }
 
@@ -236,7 +263,7 @@ main {
     right: 10px;
     top: 50%;
 
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     cursor: pointer;
 
 }
@@ -252,10 +279,12 @@ main {
     display: flex;
     justify-content: space-between;
 }
-.thumbnails > button {
+
+.thumbnails>button {
 
     border-radius: 10px;
 }
+
 .thumbnail {
     border: none;
     background-color: white;
@@ -264,7 +293,7 @@ main {
     cursor: pointer;
 }
 
-.thumbnail > img {
+.thumbnail>img {
     position: relative;
     border-radius: 10px;
     width: 70px;
@@ -273,8 +302,7 @@ main {
 
 .on {
     display: inline;
-    position: absolute;
-    border: solid 2px orangered;
+    border: solid 2px hsl(26, 100%, 55%);
     border-radius: 10px;
     padding: 1px;
     opacity: 0.4;
@@ -282,11 +310,12 @@ main {
 
 
 .title_header {
-    color: orangered;
+    color: hsl(26, 100%, 55%);
     margin-top: 30px;
     margin-bottom: 10px;
 
 }
+
 .main_div {
     color: gray;
     font-size: 16px;
@@ -319,10 +348,10 @@ main {
 .discount {
     display: inline-block;
     background-color: rgb(252, 234, 228);
-    color: orangered;
+    color: hsl(26, 100%, 55%);
     padding-left: 7px;
     padding-right: 7px;
-    font-weight:700;
+    font-weight: 700;
     border-radius: 3px;
 }
 
@@ -334,7 +363,7 @@ main {
 .inputs {
     display: flex;
     font-weight: 900;
-    height: 50px;
+    height: 60px;
     justify-content: space-between;
     margin-top: 30px;
 
@@ -349,7 +378,7 @@ main {
     font-weight: bold;
     border: none;
     border-radius: 0px;
-    width:  50px;
+    width: 50px;
     background-color: rgb(241, 241, 241);
     text-align: center;
 }
@@ -359,7 +388,8 @@ main {
 }
 
 
-#max_b, #min_b {
+#max_b,
+#min_b {
     background-color: rgb(241, 241, 241);
     padding: 15px;
     border: none;
@@ -376,16 +406,17 @@ main {
 
 }
 
-#max_b:active, #min_b:active {
+#max_b:active,
+#min_b:active {
     background-color: rgb(246, 246, 246);
     opacity: 0.6;
 
 }
 
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 .icon_cart {
@@ -393,7 +424,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #button_add {
-    background-color: orangered;
+    background-color: hsl(26, 100%, 55%);
     font-weight: bold;
     color: white;
     font-size: 16px;
@@ -404,15 +435,22 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-#button_add:active {
+#button_add:hover {
     background-color: rgb(255, 138, 95);
+}
+
+#button_add:active {
+    transform: translateY(5px);
+    background-color: rgb(255, 138, 95);
+    box-shadow: 1px 5px 15px rgba(255, 68, 0, 0.185);
+
 }
 
 .attribution {
     position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 900px) {
@@ -428,7 +466,8 @@ input[type=number]::-webkit-outer-spin-button {
     .list {
         display: none;
     }
-    .list_copia{
+
+    .list_copia {
         position: absolute;
         margin: 0px;
         padding: 0px;
@@ -445,27 +484,27 @@ input[type=number]::-webkit-outer-spin-button {
         z-index: 1;
     }
 
-    .list_copia > a > li {
+    .list_copia>a>li {
         color: black;
 
     }
 
-    .list_copia > a {
+    .list_copia>a {
         display: flex;
         text-decoration: none;
         padding-left: 10px;
         width: 100%;
-        height:100%;
+        height: 100%;
         align-items: center;
         justify-content: flex-start;
     }
 
-    .list_copia > a:hover {
+    .list_copia>a:hover {
         border-bottom: none;
-        border-left: solid 6px orangered;
+        border-left: solid 6px hsl(26, 100%, 55%);
         transition: 0.2s;
     }
-    
+
     .appear {
         display: flex;
         z-index: 1;
@@ -480,7 +519,7 @@ input[type=number]::-webkit-outer-spin-button {
         display: block;
         border: 0px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 5;
     }
 
     .menu {
@@ -491,7 +530,7 @@ input[type=number]::-webkit-outer-spin-button {
         width: 50%;
         height: 100%;
         background-color: white;
-        z-index: 1;
+        z-index: 4;
     }
 
     .active_menu {
@@ -505,7 +544,7 @@ input[type=number]::-webkit-outer-spin-button {
         background-color: black;
         width: 100vw;
         height: 100vh;
-        z-index: 1;
+        z-index: 3;
         opacity: 0.8;
     }
 
@@ -527,12 +566,14 @@ input[type=number]::-webkit-outer-spin-button {
 
     .main_image {
         border-radius: 0px;
-        width:auto;
+        width: auto;
         height: 500px;
         z-index: -1;
     }
-    .button_left, .button_right {
-        display: block;    
+
+    .button_left,
+    .button_right {
+        display: block;
     }
 
     .content {
@@ -545,10 +586,11 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
         height: 110px;
     }
-    
+
     .label_amount {
         width: 100%;
     }
+
     #amount {
         width: 100%;
     }
@@ -566,8 +608,8 @@ input[type=number]::-webkit-outer-spin-button {
         background: white;
         box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.171);
     }
-        
+
     .attribution {
-        display : none
+        display: none
     }
 }
