@@ -366,6 +366,7 @@ main {
     height: 60px;
     justify-content: space-between;
     margin-top: 30px;
+    margin-bottom: 60px;
 
 }
 
@@ -456,7 +457,6 @@ input[type=number]::-webkit-outer-spin-button {
 @media screen and (max-width: 900px) {
     body {
         overflow-x: hidden;
-        height: 1100px;
     }
 
     .nav {
