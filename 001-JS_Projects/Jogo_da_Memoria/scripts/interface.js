@@ -42,8 +42,6 @@ function createCardsFromTechs(techs) {
 }
 
 
-<<<<<<< HEAD
-=======
 function createCardFace(face, card, element) {
     let cardElementFace = document.createElement('div');
     cardElementFace.classList.add(face);
@@ -57,7 +55,6 @@ function createCardFace(face, card, element) {
     }
     element.appendChild(cardElementFace);
 }
->>>>>>> 6d17033c7ae26051a8ce5cffc6ffb7cabc057591
 
 function createPairFromTech(tech) {
 
