@@ -12,11 +12,16 @@ body {
 }
 
 .responsive_menu {
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+    z-index: 5;
     display: none;
-
 }
 
-
+#close {
+    display: none;
+}
 .nav {
     display: flex;
     flex-direction: row;
@@ -27,6 +32,7 @@ body {
     width: 100%;
 
 }
+
 
 .left {
     display: flex;
@@ -117,6 +123,10 @@ body {
 .list>a:hover {
     border-bottom: solid 6px hsl(26, 100%, 55%);
     transition: 0.2s;
+}
+
+.menu {
+    display: none;
 }
 
 .cart_popup {
@@ -458,22 +468,39 @@ input[type=number]::-webkit-outer-spin-button {
     .nav {
         width: 100vw;
     }
+    
+    .close {
+        display: block;
+
+    }
 
     .list {
+        display: block;
         position: absolute;
-        top: 8vh;
+        top: 0vh;
         left: 0vh;
         width: 50vw;
+        padding: 30px;
+        padding-top: 100px;
         height: 100vh;
-        background-color: black;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        background-color: white;
+        z-index: 4;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in;
+
+    }
+    .menu {
+        display: block;
         z-index: 5;
+    }
+    .active_menu {
+        transform: translateX(0%);
     }
 
     .list>a {
-        justify-content: center;
+        font-weight: bold;
+        color: black;
+        padding: 15px;
         width: 100px;
         height: auto;
     }
@@ -491,31 +518,12 @@ input[type=number]::-webkit-outer-spin-button {
         z-index: 1;
     }
 
-    .close {
-        display: block;
-    }
-
     .responsive_menu {
         background-color: white;
         display: block;
         border: 0px;
         cursor: pointer;
         z-index: 5;
-    }
-
-    .menu {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50%;
-        height: 100%;
-        background-color: white;
-        z-index: 4;
-    }
-
-    .active_menu {
-        display: block;
     }
 
     .curtain {
@@ -526,6 +534,7 @@ input[type=number]::-webkit-outer-spin-button {
         width: 100vw;
         height: 100vh;
         z-index: 3;
+        transition: 1s;
         opacity: 0.8;
     }
 
@@ -593,4 +602,5 @@ input[type=number]::-webkit-outer-spin-button {
     .attribution {
         display: none
     }
+
 }

@@ -1,20 +1,33 @@
 class MobileNavBar {
-    constructor(mobileList, list) {
-        this.mobileList = $(mobileList);
-        this.list = $(list);
-        this.activeClass = "active";
-        
+    constructor(mobileButton, mobileNav, curtain) {
+        this.mobileButton = $(mobileButton);
+        this.mobileNav = $(mobileNav)
+        this.curtain = $(curtain)
+
+        this.activeClass = "active_menu";
+        this.closeCurtain = "close"
+        this.handleClick = this.handleClick.bind(this) 
+
+    }
+
+
+    handleClick() {
+        console.log(this);
+        this.mobileNav.toggleClass(this.activeClass);
+        setTimeout(() => {
+            this.curtain.toggleClass(this.closeCurtain);
+        }, 100)
+        this.mobileButton.toggle().attr(this.closeCurtain)
+
     }
 
     EventClick() {
-        this.mobileList.click(() => {
-            console.log("heyyy");})
+        this.mobileButton.click(() => {this.handleClick()});
     }
 
     init() {
-        if (this.mobileList) {
+        if (this.mobileButton) {
             this.EventClick();
-
         }
 
         return this;
@@ -22,9 +35,9 @@ class MobileNavBar {
 }
 
 const mobileNavBar = new MobileNavBar(
+    ".responsive_menu",
     ".list",
-    ".nav-list",
-    ".nav-list li",
+    ".curtain",
 )
 
 mobileNavBar.init();
