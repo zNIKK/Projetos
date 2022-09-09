@@ -28,6 +28,10 @@
 </head>
 
 <body>
+  <div class='cart_popup'>
+    <h1 class='title_popup'>cart</h1>
+    <div class='content_popup'>your cart is empty</div>
+  </div>
   <div class="curtain"></div>
   <nav class="nav">
     <div class="menu">
@@ -59,7 +63,11 @@
       </ul>
     </div>
     <div class="right">
-      <button class="button_cart"><img src="images/icon-cart.svg" alt=""></button>
+      <button class="button_cart">
+        <img src="images/icon-cart.svg" alt="">
+        <div style="display: none;" class='count_cart'></div> 
+      </button>
+
       <button class="button_avatar"><img class="avatar" src="images/image-avatar.png" alt=""></button>
     </div>
   </nav>
@@ -112,7 +120,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">zNIKK</a>.
   </div>
 
 
@@ -120,12 +128,6 @@
   <script src="script/interface.js"></script>
   <script src="script/mobile_nav.js"></script>
 
-
-
-  <!--
-    <img src="images/image-product-2-thumbnail.jpg">
-    <img src="images/image-product-2.jpg">
-  -->
 </body>
 
 </html>

@@ -12,11 +12,10 @@ class MobileNavBar {
 
 
     handleClick() {
-        console.log(this);
         this.mobileNav.toggleClass(this.activeClass);
         setTimeout(() => {
             this.curtain.toggleClass(this.closeCurtain);
-        }, 100)
+        }, 250)
         this.mobileButton.toggle().attr(this.closeCurtain)
 
     }

@@ -183,9 +183,15 @@ body {
 
 .text_product>h1,
 .text_product>p {
+    
     font-weight: 500;
     margin: 0px;
     font-size: 14px;
+}
+
+.text_product>p {
+    display:flex;
+    justify-content: space-evenly;
 }
 
 .checkout_button {
@@ -486,7 +492,7 @@ input[type=number]::-webkit-outer-spin-button {
         background-color: white;
         z-index: 4;
         transform: translateX(-100%);
-        transition: transform 0.3s ease-in;
+        transition: transform 0.2s ease-in;
 
     }
     .menu {
