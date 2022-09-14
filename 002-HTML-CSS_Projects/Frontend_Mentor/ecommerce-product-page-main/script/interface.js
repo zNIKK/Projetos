@@ -1,35 +1,33 @@
 let thumb = $(".thumbnail").get();
 let count_images = 1
 
-$("#1").children().addClass("on")  
+$("#1").children().addClass("on")
 
 
-thumb.forEach(element => {
-    element.click(() => {
-        console.log(element);
-        switch_images(element)
-    })
+thumb.forEach(elements => {
+    $(elements).click(() => {
+        switch_images(elements);
+    });
 });
 
 
-function switch_images(img) {
-    console.log(img);
-    img.children().toggleClass("on")
-    let id = element.attr("id")
-    $(".main_image").attr("src", src = "images/image-product-"+ id +".jpg" );
+function switch_images(element) {
 
-    };
+    $(element).children().toggleClass("on");
+    let id = $(element).attr("id");
+    $(".main_image").attr("src", src = "images/image-product-" + id + ".jpg");
+    console.log($(element).children().attr('class'));
+};
 
-    
-    //$(".button_right").click(() => {
-    //    if (count_images < 4){
-    //        count_images++
-    //    }
-    
-    //    $(".main_image").attr("src", src = "images/image-product-"+ count_images +".jpg");
-    
-    //})
-        
+//$(".button_right").click(() => {
+//    if (count_images < 4){
+//        count_images++
+//    }
+
+//    $(".main_image").attr("src", src = "images/image-product-"+ count_images +".jpg");
+
+//})
+
 
 
 
@@ -49,17 +47,17 @@ function nav() {
         let menu = $(".menu");
 
 
-        if ($(".responsive_menu").html() == icon_menu) { 
+        if ($(".responsive_menu").html() == icon_menu) {
 
             $(".responsive_menu").html("<img src='images/icon-close.svg'></img>");
 
-        
+
         } else {
             $(".responsive_menu").html("<img src='images/icon-menu.svg'>");
 
         }
 
-        menu.animate({height: 'toggle'},200,() => {
+        menu.animate({ height: 'toggle' }, 200, () => {
 
             menu.append('<ul class="list_copia"><a href="*"><li>Collections</li></a><a href="*"><li>Men</li></a><a href="*"><li>Women</li></a><a href="*"><li>About</li></a><a href="*"><li>Contact</li></a></ul>');
             $(".list_copia").toggleClass("appear");
@@ -78,14 +76,14 @@ function cart() {
     $("body").prepend("<div class='cart_popup'></div>")
     $(".cart_popup").html("<h1 class='title_popup'>cart</h1><div class='content_popup'>your cart is empty</div>")
     $(".button_cart").click(() => {
-        
+
         $(".cart_popup").fadeToggle(200)
         $(".count_cart").remove()
         c = 0
-    
-    
+
+
     })
-    
+
     $("#button_add").click(() => {
         let title_product = $(".main_title").text()
         let main_price = $(".main_value").text()
@@ -106,40 +104,40 @@ function cart() {
         </div>
         <button class="checkout_button">Checkout</button>
         `)
-    
-    $(".delete").click(() => {
-        $(".product_popup").remove()
-        $(".checkout_button").remove()
-        $(".content_popup").text("your cart is empty")
-    }) 
-    })    
+
+        $(".delete").click(() => {
+            $(".product_popup").remove()
+            $(".checkout_button").remove()
+            $(".content_popup").text("your cart is empty")
+        })
+    })
 }
 
 
 function buttons() {
     $("#min_b").click(() => {
         let cont = $("#amount").val()
-    
-        if (cont > 0){
+
+        if (cont > 0) {
             cont--
         } else {
             cont = 0;
         }
         $("#amount").val(cont);
-    
-        })
-    
+
+    })
+
     $("#max_b").click(() => {
         let cont = $("#amount").val()
-    
+
         if (cont >= 0) {
             cont++
         } else {
             cont = 0;
         }
         $("#amount").val(cont);
-    
-    })  
+
+    })
 }
 
 
