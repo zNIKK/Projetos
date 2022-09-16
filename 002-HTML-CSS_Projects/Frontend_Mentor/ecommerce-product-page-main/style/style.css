@@ -12,11 +12,16 @@ body {
 }
 
 .responsive_menu {
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+    z-index: 5;
     display: none;
-
 }
 
-
+#close {
+    display: none;
+}
 .nav {
     display: flex;
     flex-direction: row;
@@ -27,6 +32,7 @@ body {
     width: 100%;
 
 }
+
 
 .left {
     display: flex;
@@ -119,7 +125,7 @@ body {
     transition: 0.2s;
 }
 
-.list_copia {
+.menu {
     display: none;
 }
 
@@ -177,9 +183,15 @@ body {
 
 .text_product>h1,
 .text_product>p {
+    
     font-weight: 500;
     margin: 0px;
     font-size: 14px;
+}
+
+.text_product>p {
+    display:flex;
+    justify-content: space-evenly;
 }
 
 .checkout_button {
@@ -462,56 +474,54 @@ input[type=number]::-webkit-outer-spin-button {
     .nav {
         width: 100vw;
     }
+    
+    .close {
+        display: block;
+
+    }
 
     .list {
-        display: none;
-    }
-
-    .list_copia {
+        display: block;
         position: absolute;
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-        top: 100px;
-        left: 50px;
+        top: 0vh;
+        left: 0vh;
+        width: 50vw;
+        padding: 30px;
+        padding-top: 100px;
+        height: 100vh;
+        background-color: white;
+        z-index: 4;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-in;
+
+    }
+    .menu {
+        display: block;
+        z-index: 5;
+    }
+    .active_menu {
+        transform: translateX(0%);
+    }
+
+    .list>a {
         font-weight: bold;
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 200px;
-        height: 180px;
-        z-index: 1;
-    }
-
-    .list_copia>a>li {
         color: black;
-
+        padding: 15px;
+        width: 100px;
+        height: auto;
     }
 
-    .list_copia>a {
-        display: flex;
-        text-decoration: none;
-        padding-left: 10px;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: flex-start;
-    }
 
-    .list_copia>a:hover {
-        border-bottom: none;
+    .list>a:hover {
         border-left: solid 6px hsl(26, 100%, 55%);
+        border-bottom: none;
         transition: 0.2s;
     }
+    
 
     .appear {
         display: flex;
         z-index: 1;
-    }
-
-    .close {
-        display: block;
     }
 
     .responsive_menu {
@@ -522,21 +532,6 @@ input[type=number]::-webkit-outer-spin-button {
         z-index: 5;
     }
 
-    .menu {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50%;
-        height: 100%;
-        background-color: white;
-        z-index: 4;
-    }
-
-    .active_menu {
-        display: block;
-    }
-
     .curtain {
         position: absolute;
         top: 0;
@@ -545,6 +540,7 @@ input[type=number]::-webkit-outer-spin-button {
         width: 100vw;
         height: 100vh;
         z-index: 3;
+        transition: 1s;
         opacity: 0.8;
     }
 
@@ -612,4 +608,5 @@ input[type=number]::-webkit-outer-spin-button {
     .attribution {
         display: none
     }
+
 }

@@ -8,6 +8,9 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
   background-color: hsl(217, 54%, 11%);
 }
 
@@ -18,7 +21,6 @@ body {
     transform: translate(-50%, -50%);
     margin: auto;
     max-width: 300px;
-    min-width: 300px;
     border-radius: 10px;
     background-color: hsl(216, 50%, 16%);
 }
@@ -28,75 +30,41 @@ h1 {
     color: white;
 }
 
-.viewIMG {
-    background-image: url('/Projetos/Frontend_Mentor/NFT/images/icon-view.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10px;
-    border-radius: 20px;
-    width: 50px;
-    height: 50px;
-    left: 50%;
-    top: 27%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    opacity: 0;
-}
-
 .mainIMG {
-    background-color: aqua;
-    padding: 0px;
-    border-radius: 20px;
-    width: 300px;
-    height: 300px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    position: absolute;
-    opacity: 0;
+  padding: 0px;
+  position: relative;
 }
 
-.BGmain {  
-    background-image: url("/Projetos/Frontend_Mentor/NFT/images/image-equilibrium.jpg");
-    padding: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    z-index: 1;
+.img {
+  width: 100%;
+  padding: 0px;
+}
+
+.divIMG {
+  
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  padding: 0px;
+  background-color: hwb(178 0% 0%);
+  opacity: 0;
+  z-index: 1;
+
 }
 
 .viewIMG {
-    position: absolute;
-    padding:0px;
-    top: 30%;
-    left: 50%;
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 
-    transform: translate(-50%, -50%);
-    display: inline;
-    width: 80px;
-    opacity: 0;
 }
 
-
-.viewIMG:hover {
-    opacity: 1;
-}
-
-.viewIMG:hover ~ .BGmain {
-    opacity: 1;
-}
-
-
-/* Ativar hover ao mesmo tempo */
-
-.BGmain:hover > .mainIMG {
-    opacity: 0.5;
-}
-
-.BGmain:hover > .viewIMG {
-    opacity: 1;
+.divIMG:hover, .viewIMG:hover {
+  opacity: 0.5;
 }
 
 .avatar {
