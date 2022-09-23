@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    font-family: 'Epilogue', sans-serif;
+}
+
+.btn-link,    
 .nav-link {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.dropdown-toggle {
+
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -8,19 +19,37 @@
 }
 
 .dropdown-toggle::after {
-    vertical-align: 1px;
+    height: 12px;
+    vertical-align: 0px;
     content: url('../images/icon-arrow-down.svg');
-    border:none;
+    border:none;    
 }
-.dropdown-toggle:focus {
+.nav-link:focus {
     font-weight: 700;
 }
 
-.dropdown-toggle:::after {
+.dropdown-toggle:focus::after {
     content: url('../images/icon-arrow-up.svg');
 }
 
 .dropdown-menu {
     border: none;
     box-shadow: 0px 0px 30px hsla(0, 0%, 41%, 0.384);
+}
+
+.main-container{
+    width: 430px;
+}
+.container {
+    max-width: 960px;
+}
+
+.title {
+    line-height: 60px;
+    font-weight: 700;
+}
+
+
+.img {
+    width: 350px;
 }
