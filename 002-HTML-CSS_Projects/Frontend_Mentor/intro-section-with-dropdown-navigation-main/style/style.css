@@ -24,7 +24,7 @@
     font-weight: 700;
 }
 
-.dropdown-toggle:focus::after {
+.dropdown-toggle:read-write:after {
     content: url('../images/icon-arrow-up.svg');
 }
 
@@ -38,20 +38,13 @@
     height: 430px;
 }
 
-.container {
-    max-width: 960px;
-}
-
 .title {
     line-height: 60px;
     font-weight: 700;
 }
-
-
 .img {
-    width: 350px;
+    max-width: 55vmin;
 }
-
 
 .btn-learn-more {
     color: black;

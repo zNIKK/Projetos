@@ -66,8 +66,8 @@
     </div>
   </nav>
 
-  <main class="container d-flex justify-content-between">
-    <div class="d-flex align-items-end">
+  <main class="container d-flex justify-content-around align-items-end h-75">
+    <div>
       <div class="main-content d-flex flex-column justify-content-between">
         <div>
           <h1 class="title display-3">Make remote work</h1>
@@ -87,7 +87,10 @@
     </div>
     
     <div>
-      <img class="img img-fluid" src="images/image-hero-desktop.png" alt="">
+      <picture>
+        <source media="(max-width: 1000px)" srcset="./images/image-hero-mobile.png">
+        <img class="img img-fluid" src="./images/image-hero-desktop.png" alt="">
+      </picture>
     </div>
 
   </main>
