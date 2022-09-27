@@ -16,7 +16,7 @@
     font-weight: 700;
 }
 
-.dropdown-toggle:::after {
+.dropdown-toggle:read-write:after {
     content: url('../images/icon-arrow-up.svg');
 }
 
