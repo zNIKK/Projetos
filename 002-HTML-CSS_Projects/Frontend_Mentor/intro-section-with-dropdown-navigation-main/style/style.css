@@ -30,8 +30,6 @@
         height: 100vh;
     }    
 }
-<<<<<<< HEAD
-=======
 
 .title {
     line-height: 60px;
@@ -49,8 +47,12 @@
 }
 
 .container {
-    max-width: 1140px;
 }
+
+.closer {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     main {
         flex-direction: column-reverse;
@@ -72,11 +74,14 @@
         background-color: white;
         height: 100vh;
         z-index: 0;
+        transition: none;
+        width: 50%;
     }
 
     form {
         flex-direction: column;
-        text-align: center
+        text-align: center;
+        align-items: center;
     }
 
     .dropdown-menu {
@@ -84,10 +89,13 @@
     }
 
     .closer {
+
         display: flex;
-        justify-content: end;
-        margin: 30px;
-        right: 0px;
+        flex-direction: row-reverse;
+        margin: 27px 18px 27px 0px;
+    }
+
+    .nav-link {
+        margin-left: 20px;
     }
 }
->>>>>>> 76afbbd0d7ba403c0217d62a6fedc8c78c7dc4d0
