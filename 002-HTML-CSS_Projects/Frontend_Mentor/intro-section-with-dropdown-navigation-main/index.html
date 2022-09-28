@@ -15,6 +15,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+<<<<<<< HEAD
     body {
       height: 100vh;
     }
@@ -29,10 +30,16 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+=======
+    body { height: 100vh; }
+    .attribution { font-size: 11px; margin: auto; text-align: center; margin: 50px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+>>>>>>> 76afbbd0d7ba403c0217d62a6fedc8c78c7dc4d0
   </style>
 </head>
 
 <body>
+<<<<<<< HEAD
   <div class="header container-fluid"> 
     <nav class="navbar navbar-expand-lg py-4">
 
@@ -87,10 +94,62 @@
       </div>
     </nav>
   </div>
+=======
+  <nav class="navbar navbar-expand-xl py-4">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-5" href="./">
+        <img src="images/logo.svg" alt="">
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainnavbar">
+        <img src="images/icon-menu.svg" alt="">
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="mainnavbar">
+        <button class="closer navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainnavbar">
+          <img src="images/icon-close-menu.svg" alt="">
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div class="dropdown">
+              <a id="features" data-bs-toggle="dropdown" class="nav-link dropdown-toggle" href="">
+                Features
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-todo.svg" alt="">Todo list</a></li>
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-calendar.svg" alt="">Calendar</a></li>
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-reminders.svg" alt=""> Reminders</a></li>
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-planning.svg" alt="">Planning</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a id="company" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="">Company</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item px-4" href="#">History</a></li>
+                <li><a class="dropdown-item px-4" href="#">Our Team</a></li>
+                <li><a class="dropdown-item px-4" href="#">Blog</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="">About</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <form class="d-flex">
+              <a href="#" class="nav-link">Login</a>
+              <button class="btn btn-outline-secondary mx-5">register</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+>>>>>>> 76afbbd0d7ba403c0217d62a6fedc8c78c7dc4d0
 
-  <main class="container d-flex justify-content-between">
-    <div class="d-flex align-items-end">
-      <div class="main-content d-flex flex-column justify-content-between">
+  <main class="container row align-items-end m-auto g-5">
+    <div class="col">
+      <div class="main-content d-flex justify-content-between flex-column">
         <div>
           <h1 class="title display-3">Make remote work</h1>
           <p class="text-muted my-5">
@@ -107,9 +166,18 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
     <div>
       <img class="img img-fluid" src="images/image-hero-desktop.png" alt="">
+=======
+    
+    <div class="main-img col">
+      <picture>
+        <source media="(max-width: 1200px)" srcset="./images/image-hero-mobile.png">
+        <img class="img img-fluid" src="./images/image-hero-desktop.png" alt="">
+      </picture>
+>>>>>>> 76afbbd0d7ba403c0217d62a6fedc8c78c7dc4d0
     </div>
 
   </main>

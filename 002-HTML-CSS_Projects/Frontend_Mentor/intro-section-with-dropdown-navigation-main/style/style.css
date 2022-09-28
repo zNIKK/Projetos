@@ -30,3 +30,64 @@
         height: 100vh;
     }    
 }
+<<<<<<< HEAD
+=======
+
+.title {
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.img {
+    height: 100%;
+}
+
+.btn-learn-more {
+    color: black;
+    border: solid 1px black;
+    background-color: white;
+}
+
+.container {
+    max-width: 1140px;
+}
+@media (max-width: 1200px) {
+    main {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .main-content {
+        margin: auto;
+    }
+
+    .main-img {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #mainnavbar {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: white;
+        height: 100vh;
+        z-index: 0;
+    }
+
+    form {
+        flex-direction: column;
+        text-align: center
+    }
+
+    .dropdown-menu {
+        box-shadow: none;
+    }
+
+    .closer {
+        display: flex;
+        justify-content: end;
+        margin: 30px;
+        right: 0px;
+    }
+}
+>>>>>>> 76afbbd0d7ba403c0217d62a6fedc8c78c7dc4d0
