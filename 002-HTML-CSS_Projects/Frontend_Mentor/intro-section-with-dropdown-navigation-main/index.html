@@ -15,16 +15,28 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    body { height: 100vh; }
-    .attribution { font-size: 11px; margin: auto; text-align: center; margin: 50px;}
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      height: 100vh;
+    }
+
+    .attribution {
+      text-align: center;
+      position: absolute;
+      left: 50vw;
+      bottom: 0vh;
+      transform: translate(-50%, 0%);
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-between">
   <nav class="navbar navbar-expand-xl py-4">
     <div class="container-fluid">
-      <a class="navbar-brand mx-5" href="./">
+      <a class="navbar-brand mx-5 " href="./">
         <img src="images/logo.svg" alt="">
       </a>
       <button class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainnavbar">
@@ -43,10 +55,14 @@
                 Features
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-todo.svg" alt="">Todo list</a></li>
-                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-calendar.svg" alt="">Calendar</a></li>
-                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-reminders.svg" alt=""> Reminders</a></li>
-                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-planning.svg" alt="">Planning</a></li>
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-todo.svg" alt="">Todo list</a>
+                </li>
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-calendar.svg"
+                      alt="">Calendar</a></li>
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-reminders.svg" alt="">
+                    Reminders</a></li>
+                <li><a class="dropdown-item" href="#"><img class="mx-3" src="images/icon-planning.svg"
+                      alt="">Planning</a></li>
               </ul>
             </div>
           </li>
@@ -65,9 +81,9 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <form class="d-flex mt-4">
+            <form class="d-flex">
               <a href="#" class="nav-link w-75">Login</a>
-              <button class="btn btn-outline-secondary mx-5 w-75
+              <button class="btn btn-outline-secondary mx-5 w-75 fw-bold
               ">register</button>
             </form>
           </li>
@@ -76,27 +92,32 @@
     </div>
   </nav>
 
-  <main class="container row align-items-end m-auto g-5">
-    <div class="col">
-      <div class="main-content d-flex justify-content-between flex-column">
-        <div>
-          <h1 class="title display-3">Make remote work</h1>
-          <p class="text-muted my-5">
+  <main class="container row m-auto">
+    <div class="main-content col d-flex flex-column justify-content-end px-5">
+      <div class="d-flex align-items-center justify-content-center h-100 py-5 ">
+        <div class="row flex-column text-content">
+          <h1 class="h1 col title display-1">Make remote work</h1>
+          <p class="col-9 text-muted fw-bold my-5">
             Get your team in sync, no matter your location.
             Streamline processes, create team rituals, and watch productivity soar.
           </p>
-          <button class="btn-learn-more btn btn-dark">Learn more</button>
-        </div>
-        <div class="d-flex justify-content-between align-items-center">
-          <img src="images/client-databiz.svg" alt="">
-          <img src="images/client-audiophile.svg" alt="">
-          <img src="images/client-meet.svg" alt="">
-          <img src="images/client-maker.svg" alt="">
+
+          <div>
+            <button class="col-3 btn-learn-more btn btn-dark fw-bold">Learn more</button>
+          </div>
+
         </div>
       </div>
+      <div class="d-flex justify-content-between align-items-center ">
+        <img class="img-fluid" src="images/client-databiz.svg" alt="">
+        <img src="images/client-audiophile.svg" alt="">
+        <img src="images/client-meet.svg" alt="">
+        <img src="images/client-maker.svg" alt="">
+      </div>
+
     </div>
-    
-    <div class="main-img col">
+
+    <div class="main-img col px-5">
       <picture>
         <source media="(max-width: 1200px)" srcset="./images/image-hero-mobile.png">
         <img class="img img-fluid" src="./images/image-hero-desktop.png" alt="">
@@ -104,6 +125,7 @@
     </div>
 
   </main>
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
