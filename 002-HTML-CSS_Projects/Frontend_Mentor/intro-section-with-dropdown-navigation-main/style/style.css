@@ -32,6 +32,7 @@
 
 .container {
     max-width: 1200px;
+    
 }
 
 
@@ -49,9 +50,8 @@
     height: 100%;
 }
 
-.btn-learn-more {
+.btn:first-child:hover {
     color: black;
-    border: solid 1px black;
     background-color: white;
 }
 
@@ -64,11 +64,6 @@
         flex-direction: column-reverse;
         text-align: center;
     }
-
-    body {
-
-    }
-
 
     .main-img {
         padding: 0px !important;
@@ -137,4 +132,10 @@
         display:none;
     }
     
+}
+
+@media (max-width: 1440px) {   
+    .attribution {
+        display:none;
+    }
 }
