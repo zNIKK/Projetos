@@ -55,7 +55,6 @@
     color: black;
     background-color: white;
 }
-
 .closer {
     display: none;
 }
@@ -145,9 +144,14 @@
         width: auto;
     }
 
-    .responsive-imgs {
-        padding: 30px;
+    .responsive-imgs > img  {
+        padding: 10px;
     }
+
+    .responsive-imgs  {
+        justify-content: center !important;
+    }
+
     .attribution {
         display:none;
     }
