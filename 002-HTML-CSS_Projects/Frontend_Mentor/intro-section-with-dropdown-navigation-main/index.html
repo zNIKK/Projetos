@@ -30,7 +30,7 @@
 </head>
 <body>
 
-  <div id="curtain" class="collapse curtain"></div>
+  <div id="curtain" class="collapse fade curtain" data-bs-toggle="collapse" data-bs-target="#mainnavbar, #curtain"></div>
   <div class="d-flex flex-column justify-content-between h-100">
     <nav class="navbar navbar-expand-xl py-4">
       <div class="container-fluid">
@@ -68,9 +68,9 @@
               <div class="dropdown">
                 <a id="company" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="">Company</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item px-4" href="#">History</a></li>
-                  <li><a class="dropdown-item px-4" href="#">Our Team</a></li>
-                  <li><a class="dropdown-item px-4" href="#">Blog</a></li>
+                  <li><a class="dropdown-item px-5" href="#">History</a></li>
+                  <li><a class="dropdown-item px-5" href="#">Our Team</a></li>
+                  <li><a class="dropdown-item px-5" href="#">Blog</a></li>
                 </ul>
               </div>
             </li>
@@ -80,20 +80,22 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <form class="d-flex">
-                <a href="#" class="nav-link w-75">Login</a>
+                <a href="#" class="nav-link w-75 m-0">Login</a>
                 <button class="btn btn-outline-secondary mx-5 w-75 fw-bold px-4 py-2
-                ">register</button>
+                ">Register</button>
               </form>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+
     <main class="container row m-auto px-0">
       <div class="main-content col d-flex flex-column justify-content-end px-5">
         <div class="d-flex align-items-center justify-content-center h-100 py-5 ">
           <div class="row flex-column text-content">
-            <h1 class="h1 col title display-1">Make remote work</h1>
+            <h1 class="col title display-1"><span>Make</span> remote work</h1>
             <p class="col-9 text-muted fw-bold my-5">
               Get your team in sync, no matter your location.
               Streamline processes, create team rituals, and watch productivity soar.

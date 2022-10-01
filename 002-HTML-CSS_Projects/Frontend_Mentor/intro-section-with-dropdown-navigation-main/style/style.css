@@ -1,7 +1,10 @@
 .nav-link, .dropdown-item {
-    margin-left: 10px;
-    margin-right: 10px;
+
     font-weight: 700;
+}
+
+.nav-link {
+    margin-left: 15px;
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -57,6 +60,10 @@
 }
 .closer {
     display: none;
+}
+
+span {
+    display: block;
 }
 @media (max-width: 1200px) {
 
@@ -131,7 +138,7 @@
         align-items: center;
     }
 
-    .h1 {
+    .title {
         font-size: 38px;
     }
 
@@ -154,6 +161,10 @@
 
     .attribution {
         display:none;
+    }
+
+    span {
+        display: inline !important;
     }
     
 }
