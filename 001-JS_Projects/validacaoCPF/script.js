@@ -3,7 +3,7 @@
 /* 
 7x  0x  5x  4x  8x  4x  4x  5x  0x
 10  9   8   7   6   5   4   3   2
-70  0   40  28  48  20  16  15  4 = 241
+70  0   40  28  48  20  16  15  0 = 241
 
 11 - (237 % 11) = 5 (Primeiro digito)
 Se o digito for maior que 9, consideramos 0
@@ -22,45 +22,50 @@ Se o digito for maior que 9, consideramos 0
 // cpfCalc= cpf.map((element) => {return element * factorial(10)})
 
 
-function fact(factNum) {
-    for (let i = factNum; i >= 0; i--) {
-        let calc = (factNum + 2) * i;
-        return calc * factNum;
-    }
-}
-
 class ValidatorCPF {
-    constructor(cpf = string) {
-        this.cpf = cpf;
-        const arrayCpf = Array.from(cpf)
+    constructor(cpf) {
+        this.cpf = cpf
+        this.cpfFormated = Array.from(cpf.replace(/\D+/g, '')).reverse()
+    }
 
-        // Object.defineProperty(this, 'cpf', {
-        //     configurable: true,
-        //     get: function () {
-        //         return cpf;
-        //     },
-        //     set: function (valor) {
-        //         if (typeof valor !== 'number') {
-        //             throw Error('[cpf invalido]: cpf tem que ser um numero');
-        //         }
-        //     }
-        // });
+;    get findFirstDigit() {
+        const cleanArrayCpf = this.cpfFormated.slice(2);
+        const mappedArray = cleanArrayCpf.map(function (element, acc) {
+            // console.log(element);
+            return (acc + this) * element
+        }, 2);
+        const reducedArray = mappedArray.reduce((acc, element) => acc + element);
+        // console.log(cleanArrayCpf, mappedArray);
+        let validCpf = 11 - (reducedArray % 11)
+        validCpf > 9 ? validCpf = 0 : null;
+        return validCpf
+    }
 
-        Object.defineProperty(this, 'findFirstDigit', {
-            get: function () {
-                const revArrayCpf = arrayCpf.reverse()
-                const mappedArray = revArrayCpf.map((acc, element) => acc *= element);
-                const reduceArray = mappedArray.reduce((acc, element) => acc += element, 2);
-                console.log(mappedArray);
-                return 11 - (reduceArray % 11)
-            }
-    });""
+    get findSecondDigit() {
+        const cleanArrayCpf = this.cpfFormated.slice(1);
+        const mappedArray = cleanArrayCpf.map(function (element, acc) {
+            return (acc + this) * element
+        }, 2);
+        const reduceArray = mappedArray.reduce((acc, element) => acc + element);
+        const validCpf = 11 - (reduceArray % 11)
+        validCpf > 9 ? 0 : null;
+        return validCpf
+    }
+    get isValid() {
+
+        if (this.findFirstDigit.toString() + this.findSecondDigit.toString() == this.cpf.slice(-2) ) {
+            return "CPF valid"
+        } else {
+            return "CPF invalid"
+        }
+
 
     }
 }
 
 
-const validator = new ValidatorCPF('70548445052')
+const validator = new ValidatorCPF('705.484.450-52')
 
-console.log(validator.findFirstDigit);
+
+console.log(validator.isValid);
 
