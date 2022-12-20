@@ -525,9 +525,6 @@ input[type=number]::-webkit-outer-spin-button {
         border-radius: 0px;
     }
 
-    .div_image:() {
-        background-color: black;
-    }
 
     .button_left, .button_right {
         z-index: 0;
