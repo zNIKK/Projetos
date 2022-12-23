@@ -1,0 +1,176 @@
+.nav-link, .dropdown-item {
+
+    font-weight: 700;
+}
+
+.nav-link {
+    margin-left: 15px;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -50px;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.dropdown-toggle::after {
+    content: url('../images/icon-arrow-down.svg');
+    border:none;
+}
+.dropdown-toggle:focus {
+    font-weight: 900;
+}
+
+.dropdown-toggle:focus::after {
+    content: url('../images/icon-arrow-up.svg');
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0px 0px 30px hsla(0, 0%, 41%, 0.384);
+}
+
+.container {
+    max-width: 1200px;
+    
+}
+
+
+.main-navbar {
+    height: 100vh;
+}
+
+
+.title {
+    line-height: 80px;
+    font-weight: 700;
+}
+
+.img {
+    height: 100%;
+}
+
+.btn:first-child:hover {
+    color: black;
+    background-color: white;
+}
+.closer {
+    display: none;
+}
+
+span {
+    display: block;
+}
+@media (max-width: 1200px) {
+
+
+    .curtain {
+        position: fixed;
+        transition: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main-img {
+        padding: 0px !important;
+        margin: 0px;
+    }
+
+    
+    .main-content {
+        padding: 0px !important; 
+    }
+
+    #mainnavbar {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100vh;
+        background-color: white;
+        z-index: 0;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    form {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+
+    .navbar-brand {
+        margin: 0px !important;
+    }
+    .dropdown-menu {
+        box-shadow: none;
+    }
+
+    .closer {
+
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 27px 18px 27px 0px;
+    }
+
+    .nav-link {
+        margin-left: 20px;
+    }
+
+    .text-content {
+        align-items: center;
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+    .text-muted {
+        margin-top: 0px !important; 
+        margin-bottom: 25px !important; 
+    }
+
+    .btn-learn-more {
+        width: auto;
+    }
+
+    .responsive-imgs > img  {
+        padding: 10px;
+    }
+
+    .responsive-imgs  {
+        justify-content: center !important;
+    }
+
+    .attribution {
+        display:none;
+    }
+
+    span {
+        display: inline !important;
+    }
+    
+}
+
+@media (max-width: 1440px) {   
+    .attribution {
+        display:none;
+    }
+}

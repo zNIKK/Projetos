@@ -9,11 +9,9 @@ thumb.forEach(element => {
         let count_images = 1
         let id = $(element).attr("id")
         $(element).children().toggleClass("on")
-        $(element).children().attr("class");
-        $(".main_image").attr("src", src = "images/image-product-"+ id +".jpg" );
-        console.log($(".main_image").attr("src"));
-        // $(".main_image").html($(element).html()) 
+
     })
+    console.log($(element).children().attr("class"));
 
 });
 
