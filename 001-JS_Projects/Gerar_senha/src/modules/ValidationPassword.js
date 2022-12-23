@@ -1,4 +1,4 @@
-import Password from "./Password";
+import { Password } from "./Password";
 
 export class ValidatorPassword extends Password {
     constructor(lowercase=false, uppercase=false, symbols=false, number=true) {

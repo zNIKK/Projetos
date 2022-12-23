@@ -1,5 +1,5 @@
-import Password from "./modules/Password";
-import './assets/css/style.css';
+import { Password } from "./modules/Password";
+import './assets/css';
 
 fieldPassword = document.getElementById('password');
 

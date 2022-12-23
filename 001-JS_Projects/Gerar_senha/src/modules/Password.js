@@ -1,6 +1,6 @@
 import { ValidatorPassword } from "./ValidationPassword";
 
-export default class Password {
+export class Password {
   constructor(amount = 5) {
     this.amount = amount
     this.arrayPassword = [];
@@ -14,7 +14,7 @@ export default class Password {
         .sort(() => { return 0.5 - Math.random() })
         .slice(-1)
         .join();
-    
+
     return randomPassword;
   }
 
@@ -30,7 +30,7 @@ export default class Password {
             .join('')
         );
     }
-    
+
     return this.arrayPassword.join('')
   }
 }
