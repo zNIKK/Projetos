@@ -28,7 +28,7 @@ class ValidatorCPF {
         this.cpfFormated = Array.from(cpf.replace(/\D+/g, '')).reverse()
     }
 
-;    get findFirstDigit() {
+    ; get findFirstDigit() {
         const cleanArrayCpf = this.cpfFormated.slice(2);
         const mappedArray = cleanArrayCpf.map(function (element, acc) {
             // console.log(element);
@@ -53,7 +53,7 @@ class ValidatorCPF {
     }
     get isValid() {
 
-        if (this.findFirstDigit.toString() + this.findSecondDigit.toString() == this.cpf.slice(-2) ) {
+        if (this.findFirstDigit.toString() + this.findSecondDigit.toString() == this.cpf.slice(-2)) {
             return "CPF valid"
         } else {
             return "CPF invalid"
