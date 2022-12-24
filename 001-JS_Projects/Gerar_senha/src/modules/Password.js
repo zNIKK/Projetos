@@ -1,26 +1,33 @@
 import { ValidatorPassword } from "./ValidationPassword";
 
-export class Password {
-  constructor(amount = 5) {
+export class Password extends ValidatorPassword {
+
+  constructor(amount = 5, lowercase, uppercase, symbols, number) {
+    super(lowercase, uppercase, symbols, number)
     this.amount = amount
     this.arrayPassword = [];
+    this.validator = new ValidatorPassword(
+      lowercase,
+      uppercase,
+      symbols,
+      number,
+    );
+
 
   }
 
   get charRandom() {
-    const randomPassword =
-      ValidatorPassword
-        .split('')
-        .sort(() => { return 0.5 - Math.random() })
-        .slice(-1)
-        .join();
 
-    return randomPassword;
+    return this.validator.options
+      .split('')
+      .sort(() => { return 0.5 - Math.random() })
+      .slice(-1)
+      .join('');
+
   }
 
   create() {
     for (let i = 1; i <= this.amount; i++) {
-      // if (this.lowercase || this.uppercase === true) {}
 
       this.arrayPassword
         .push(
@@ -31,6 +38,11 @@ export class Password {
         );
     }
 
+    return this.passwordFormated()
+  }
+
+
+  passwordFormated() {
     return this.arrayPassword.join('')
   }
 }

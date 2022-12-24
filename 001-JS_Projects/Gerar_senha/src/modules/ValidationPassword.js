@@ -1,6 +1,4 @@
-import { Password } from "./Password";
-
-export class ValidatorPassword extends Password {
+export class ValidatorPassword {
     constructor(lowercase=false, uppercase=false, symbols=false, number=true) {
         this.lowercase = lowercase;
         this.uppercase = uppercase;
@@ -9,7 +7,7 @@ export class ValidatorPassword extends Password {
     }
 
 
-    get validation() {
+    get options() {
         const symbols = '!#$%&-./<=>?_~';
         const num = '0123456789';
         const alpha = 'abcdefghijklmnopqrstuvwxyz';
@@ -31,6 +29,7 @@ export class ValidatorPassword extends Password {
         if (this.num === true) {
             password += num;
         }
+        
 
         return password;
     }
