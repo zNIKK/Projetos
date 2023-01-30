@@ -6,6 +6,7 @@ let count_images = 1
 
 thumb.forEach(element => {
     $(element).click(() => {
+        let count_images = 1
         let id = $(element).attr("id")
         $(element).children().toggleClass("on")
 
