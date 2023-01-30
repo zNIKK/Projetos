@@ -4,12 +4,10 @@ const bodyParser = require('body-parser')
 const posts = require('../model/posts.js')
 
 
-routes.get("/:title",bodyParser.json(), (req, res, next)=>{
+routes.get("/:title", (req, res, next)=>{
     let title = req.params.title;
-    let titlePost = posts.posts.find(element => element.title == title);
-
-
-    if (title == titlePost.title) {
+    let titlePost = posts.getURL(title);
+    if (titlePost) {
         let url = titlePost.url;
         res.redirect(url);
     } else {
@@ -28,7 +26,6 @@ routes.post("/new/post", bodyParser.json(),(req, res)=>{
     let description = req.body.description;
     let url = req.body.url;
 
-    console.log(url);
 
     posts.PostUrl(title, description, url);
     res.send("url adcionada!");
