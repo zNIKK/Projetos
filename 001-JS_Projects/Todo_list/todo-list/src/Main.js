@@ -13,7 +13,8 @@ import "./main.css";
 export default class Main extends Component {
     state = {
         novaTarefa: '',
-        tarefas: [null],
+        id: 0,
+        tarefas: [],
         tarefaFeita: [],
         isActive: true,
         checked: [],
@@ -61,10 +62,8 @@ export default class Main extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         let { tarefas, tarefaFeita } = this.state;
-        let { novaTarefa, checked } = this.state;
-
+        let { novaTarefa, checked, id } = this.state;
         const novasTarefas = [...tarefas];
-
         
         novaTarefa = novaTarefa.trim();
 
@@ -75,13 +74,15 @@ export default class Main extends Component {
         if(e.target[0].checked) {
             tarefaFeita.push(novaTarefa)
         }
+
         this.setState({
             tarefas: [ ...novasTarefas, novaTarefa],
             tarefaFeita: [ ...tarefaFeita ],
             checked:  [ ...checked ],
-            backupChecked: [...checked]
+            backupChecked: [...checked],
+            novaTarefa: '',
+            id: id
         })
-
     }
 
     handleChange = (e) => {
@@ -227,7 +228,7 @@ export default class Main extends Component {
     // const [stateSend, setStateSend] = useState()
     render() {
         const { novaTarefa, tarefas, isActive } = this.state;
-        let { tarefaFeita, checked } = this.state;
+        let { tarefaFeita, checked, id } = this.state;
         
         
         return (
@@ -242,6 +243,7 @@ export default class Main extends Component {
                     ></Form>
                     <div className='content'>
                         <List
+                            id={id}
                             tarefas={isActive ? tarefas : tarefaFeita}
                             handleDelete={this.handleDelete}
                             active={this.active}

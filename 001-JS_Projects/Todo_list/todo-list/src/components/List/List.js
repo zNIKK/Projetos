@@ -1,17 +1,18 @@
 import React from 'react';
 import "./list.css";
 
-export default function List ({tarefas, handleDelete, active, tarefasFeitas, isActive, checked}){
-
+export default function List ({id, tarefas, handleDelete, active, isActive, checked}){
         // e.target.classList.toggle('strikeWord')
-    if (tarefas.length === 0 && isActive === true) {
+    if (tarefas.length === 0 && isActive === false) {
+        console.log(tarefas.length);
+        return (
+            <div className="tarefas">Não Há nenhuma tarefa feita ainda</div>
+        );
+
+    } else if (tarefas.length === 0) {
         return (
             <div className="tarefas">Não Há nenhuma tarefa ainda</div>
             
-        );
-    } else if (tarefasFeitas.length === 0 && isActive === false) {
-        return (
-            <div className="tarefas">Não Há nenhuma tarefa feita ainda</div>
         );
     } else {
             return (
@@ -19,7 +20,7 @@ export default function List ({tarefas, handleDelete, active, tarefasFeitas, isA
                 <div>
                     <ul className="tarefasLista">
                         {tarefas.map((tarefa, index) => (
-                        <li className={`formText tarefaLi`} key={index}>
+                        <li className={`formText tarefaLi`} key={tarefa} id={id}>
                             <input checked={checked[index]} onChange={(e) => active(e, tarefa, index)} className='checkbox' type="checkbox" id="checkbox"/>
                             <div draggable='false' className={`divTarefa ${checked[index] ? 'strikeWord' : ''}`}>{tarefa}</div>
                             <button draggable='false' className='deleteButton' onClick={(e) => handleDelete(e, index)}>

@@ -7,12 +7,13 @@
 }
 
 #root {
-  
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-bottom: 30px;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
 
 
 .container {
-  min-width: 50vw;
+  width: 700px;
 }
 
 
@@ -48,6 +49,7 @@ body {
 }
 
 .content {
+  height: 100%;
   box-shadow: 5px 15px 17px 0.5px rgba(0, 0, 0, 0.251);
 }
 
@@ -58,5 +60,3 @@ body {
   }
   
 }
-
-
