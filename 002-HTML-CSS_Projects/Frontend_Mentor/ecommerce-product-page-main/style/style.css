@@ -133,13 +133,8 @@ body {
     box-sizing: border-box;
     display: none;
     position: absolute;
-<<<<<<< HEAD:002-HTML-CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
-    top: 90px;
-    right: 270px;
-=======
     top: 10px;
     right: 0px;
->>>>>>> b59897a (pull request):002-HTML&CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
     width: 340px;
     height: 230px;
     border-radius: 10px;
@@ -245,11 +240,8 @@ main {
 }
 
 .div_image {
-<<<<<<< HEAD:002-HTML-CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
-=======
     width: 100%;
     height: 100%;
->>>>>>> b59897a (pull request):002-HTML&CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
     opacity: 1;
     position: relative;
     z-index: 2;
@@ -257,10 +249,6 @@ main {
 
 
 .button_left {
-<<<<<<< HEAD:002-HTML-CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
-    display: none;
-=======
->>>>>>> b59897a (pull request):002-HTML&CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
 
     border-radius: 100%;
     background-color: white;
@@ -272,20 +260,12 @@ main {
     left: 10px;
     top: 50%;
 
-<<<<<<< HEAD:002-HTML-CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
-    transform: translate(0%, -50%);
-=======
     transform: translate(0%,-50%);
->>>>>>> b59897a (pull request):002-HTML&CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
     cursor: pointer;
 }
 
 .button_right {
-<<<<<<< HEAD:002-HTML-CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
-    display: none;
-=======
     opacity: 0;
->>>>>>> b59897a (pull request):002-HTML&CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
     border-radius: 100%;
     background-color: white;
     width: 60px;
@@ -296,11 +276,7 @@ main {
     right: 10px;
     top: 50%;
 
-<<<<<<< HEAD:002-HTML-CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
-    transform: translate(0%, -50%);
-=======
     transform: translate(0%,-50%);
->>>>>>> b59897a (pull request):002-HTML&CSS_Projects/Frontend_Mentor/ecommerce-product-page-main/style/style.css
     cursor: pointer;
 
 }
