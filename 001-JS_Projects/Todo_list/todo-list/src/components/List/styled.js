@@ -33,18 +33,7 @@ const ListStyled = styled.div`
       width: 100%;
       border-bottom: 1px solid hsl(237, 14%, 26%);
       box-shadow: none;
-
-
   }
-
-
-  .deleteButton {
-      cursor: pointer;
-      margin: 15px;
-      border: none;
-      background-color: transparent;
-  }
-
 
   .strikeWord {
       color: hsl(234, 11%, 52%);
