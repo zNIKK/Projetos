@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colorsDark from '../../config/colors';
+import { colorsDark } from '../../config/colors';
 
 const MainStyled = styled.div`
   background-color: ${colorsDark.veryDarkDesaturatedBlue};
@@ -7,6 +7,10 @@ const MainStyled = styled.div`
   height: 500px;
   margin-top: 30px;
   overflow-y: auto;
+
+  .themeLight {
+    background-color: white,
+  }
 
   ::-webkit-scrollbar {
     background-color: ${colorsDark.veryDarkDesaturatedBlue};
@@ -49,8 +53,8 @@ const MainStyled = styled.div`
     width: 50px;
   }
 
-  @media (max-width: 900px) {
-    height: 300px;
+  @media (max-width: 1440px) {
+    height: 400px;
 
     li > div {
       width: 380px;

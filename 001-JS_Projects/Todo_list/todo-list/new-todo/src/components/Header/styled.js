@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colorsDark from '../../config/colors';
+import { colorsDark } from '../../config/colors';
 
 const HeaderStyled = styled.div`
   display: flex;
@@ -39,6 +39,7 @@ const HeaderStyled = styled.div`
     position: absolute;
     align-self: center;
   }
+
 `;
 
 export default HeaderStyled;

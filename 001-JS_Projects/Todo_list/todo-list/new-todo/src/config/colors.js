@@ -1,4 +1,4 @@
-const colorsDark = {
+export const colorsDark = {
   BrightBlue: 'hsl(220, 98%, 61%)',
   VeryDarkBlue: 'hsl(235, 21%, 11%)',
   veryDarkDesaturatedBlue: 'hsl(235, 24%, 19%)',
@@ -9,4 +9,10 @@ const colorsDark = {
   veryVeryDarkGrayishBlue: 'hsl(237, 14%, 26%)',
 };
 
-export default colorsDark;
+export const colorsLight = {
+  VeryLightGray: 'hsl(0, 0%, 98%)',
+  VeryLightGrayishBlue: 'hsl(236, 33%, 92%)',
+  LightGrayishBlue: 'hsl(233, 11%, 84%)',
+  DarkGrayishBlue: 'hsl(236, 9%, 61%)',
+  VeryDarkGrayishBlue: 'hsl(235, 19%, 35%)',
+};

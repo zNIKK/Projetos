@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Context } from '../Context/ContextStates';
+import Theme from '../Theme/Theme';
 import HeaderStyled from './styled';
 
 export default function Header() {
@@ -14,7 +15,6 @@ export default function Header() {
 
     setTasks([...tasks, { taskText: newTasks, checked: e.target[0].checked }]);
     e.target[1].value = '';
-    console.log(newTasks);
   };
 
   const handleChange = (e) => {
@@ -33,7 +33,8 @@ export default function Header() {
     <HeaderStyled>
       <div>
         <h1>TODO</h1>
-        <img src="./assets/images/icon-moon.svg" alt="icon-moon" />
+        <Theme />
+
       </div>
       <form className="formText" onSubmit={(e) => handleSubmit(e)} action=".">
         <input onChange={(e) => checked(e)} className="checkbox" type="checkbox" name="checkbox" />

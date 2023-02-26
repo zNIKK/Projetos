@@ -17,6 +17,7 @@ function initialState() {
 }
 
 export default function ContextStates({ children }) {
+  const [switchTheme, setSwitchTheme] = useState(false);
   const [tasks, setTasks] = useState(initialState().tasks);
   const [newTasks, setNewTasks] = useState('');
   const [isCompleted, setIsCompleted] = useState(false);
@@ -29,14 +30,16 @@ export default function ContextStates({ children }) {
     tasks,
     newTasks,
     isCompleted,
+    switchTheme,
     setTasks,
     setNewTasks,
     setIsCompleted,
-  }), [tasks, newTasks, isCompleted]);
+    setSwitchTheme,
+  }), [tasks, newTasks, isCompleted, switchTheme]);
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 
 ContextStates.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
+  children: PropTypes.node.isRequired,
 };

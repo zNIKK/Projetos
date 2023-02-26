@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import colorsDark from '../config/colors';
+import { colorsDark, colorsLight } from '../config/colors';
 
 const GlobalStyled = createGlobalStyle`
   * {
@@ -80,15 +80,54 @@ const GlobalStyled = createGlobalStyle`
     background-origin: border-box;
     background-clip: content-box, border-box;
   }
+
   .strikeWord {
     color: ${colorsDark.darkGrayishBlue};
     text-decoration: line-through;
   }
 
+  .themeLight {
+    background-image: url("./assets/images/bg-desktop-light.jpg");
+    background-color: ${colorsLight.VeryLightGray};
+  }
+
+  
+  .themeLight .inputText, .themeLight .content div {
+    background-color: ${colorsLight.VeryLightGray};
+    color: ${colorsLight.VeryDarkGrayishBlue};
+
+  }
+
+  .themeLight .strikeWord {
+    color: ${colorsLight.LightGrayishBlue} !important;
+  }
+
+  .themeLight .listContent {
+    border-bottom: 1px solid ${colorsLight.LightGrayishBlue};
+  }
+
+  .themeLight .checkbox {
+    border: 1px solid ${colorsLight.LightGrayishBlue};
+  }
+
+  .themeLight .checkbox:hover {
+    border: 1px solid transparent;
+    background-image: linear-gradient(${colorsLight.VeryLightGray}, ${colorsLight.VeryLightGray}), 
+    linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+
+  .themeLight .checkbox:checked:hover, .checkbox:checked {
+    background: no-repeat center/60% 
+    url("./assets/images/icon-check.svg"), 
+    linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+    background-position: center;
+  }
+
   @media (max-width: 900px) {
       body {
           background-image: url("./assets/images/bg-mobile-dark.jpg");
-          background-size: 100% 30%;
+          object-fit: scale-down;
       }
       
       .container {

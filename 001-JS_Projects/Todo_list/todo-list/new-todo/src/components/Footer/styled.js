@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colorsDark from '../../config/colors';
+import { colorsDark } from '../../config/colors';
 
 const FooterStyled = styled.div`
   display: flex;
