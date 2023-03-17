@@ -47,6 +47,7 @@ const MainStyled = styled.div`
   li > div {
     margin: 20px 0px 20px 0px;
     width: 570px;
+    pointer-events: none
   }
 
   button {

@@ -4,8 +4,9 @@ import { Context } from '../Context/ContextStates';
 import MainStyled from './styled';
 
 export default function Main() {
+  // const [dragElement, setDragElement] = useState();
   const { tasks, setTasks, isCompleted } = useContext(Context);
-
+  console.log(tasks);
   const results = tasks.filter((e) => (
     e.checked === true
   ));
@@ -20,6 +21,25 @@ export default function Main() {
     newTask.checked = e.target.checked;
     setTasks([...tasks]);
   };
+
+  // const dragStart = (e) => {
+  //   console.log(e.target.innerHTML);
+  //   setDragElement(e.target);
+  //   e.dataTransfer.setData('text/html', e.target.innerHTML);
+  // };
+
+  // const allowDrop = (e) => {
+  //   e.preventDefault();
+  // };
+
+  // const drop = (e) => {
+  //   if (dragElement !== e.target) {
+  //     dragElement.innerHTML = e.target.innerHTML;
+  //     e.target.innerHTML = e.dataTransfer.getData('text/html');
+  //     setTasks(tasks);
+  //   }
+  //   return false;
+  // };
 
   if (results.length === 0 && isCompleted) {
     return (
@@ -42,8 +62,16 @@ export default function Main() {
       <MainStyled>
         <ul>
           {results.map((task) => (
-            <div className="listContent" key={task.taskText}>
+            <div
+              className="listContent"
+              key={task.taskText}
+            >
               <li>
+                {/* onDragStart={(e) => dragStart(e)}
+                draggable="true"
+                onDrop={(e) => drop(e)}
+                onDragOver={(e) => allowDrop(e)}
+                id="dragtarget" */}
                 <input
                   className="checkbox"
                   onChange={(e) => handleCheck(task, e)}
@@ -67,8 +95,17 @@ export default function Main() {
     <MainStyled>
       <ul>
         {tasks.map((task) => (
-          <div className="listContent" key={task.taskText}>
+          <div
+            className="listContent"
+            key={task.taskText}
+          >
             <li>
+              {/* onDragStart={(e) => dragStart(e)}
+              draggable="true"
+              onDrop={(e) => drop(e)}
+              onDragOver={(e) => allowDrop(e)}
+              id="dragtarget" */}
+
               <input
                 className="checkbox"
                 onChange={(e) => handleCheck(task, e)}

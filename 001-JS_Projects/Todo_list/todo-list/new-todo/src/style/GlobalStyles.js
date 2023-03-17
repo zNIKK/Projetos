@@ -22,7 +22,8 @@ const GlobalStyled = createGlobalStyle`
   body {
     background-image: url("./assets/images/bg-desktop-dark.jpg");
     background-color: ${colorsDark.VeryDarkBlue};
-    background-size: contain;
+    background-position: top;
+    background-size: 100% 40vh;
     background-repeat: no-repeat;
   }
 
@@ -124,12 +125,13 @@ const GlobalStyled = createGlobalStyle`
     background-position: center;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
       body {
-          background-image: url("./assets/images/bg-mobile-dark.jpg");
-          object-fit: scale-down;
+        background-image: url("./assets/images/bg-mobile-dark.jpg");
       }
-      
+      .themeLight {
+        background-image: url("./assets/images/bg-mobile-light.jpg");
+      }
       .container {
         width: 500px;
       }
