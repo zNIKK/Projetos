@@ -1,0 +1,17 @@
+{
+  "name": "appbase",
+  "version": "1.0.0",
+  "description": "Simple App Base",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start_dev": "cross-env NODE_ENV=development electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "electron": "^23.1.4"
+  }
+}
