@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" 
-    content="default-src 'none'">
+    content="script-src 'self' 'unsafe-inline';">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Base</title>
 </head>
 <body>
     <h1>Meu primeiro app</h1>
+    <h3 id="processor"></h3>
+    <button onclick="sendNewWindowMessage()">Abrir nova janela</button>
+    <script>
+        const {ipcRenderer} = require('electron')
+        const processor = document.querySelector("#processor")
+
+        ipcRenderer.on('cpu_name', (e, value) => {
+            processor.innerHTML = value
+        })
+        // processor.innerHTML = os.cpus()[0].model;
+
+        function sendNewWindowMessage() {
+            ipcRenderer.send("open_new_window")
+        }
+    </script>
 </body>
 </html>

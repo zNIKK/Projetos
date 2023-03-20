@@ -10,8 +10,10 @@ const isMac = process.platform === "darwin" ? true : false;
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 600,
-        height: 600,
+        width: isDev ? 950 : 500,
+        height: 300,
+        resizable: isDev ? true : false,
+        backgroundColor: '#234',
         show: false,
         icon: path.join(__dirname, "assets", "icons", "wooper.jpg"),
         webPreferences: {
@@ -30,27 +32,15 @@ function createWindow() {
         }, 3000);
     });
     const menuTemplate = [
-        {role: 'appMenu'},
-        {role: 'fileMenu' },
-        {
-        label: 'window',
+        {label: app.name,
             submenu: [
-                {
-                    label: 'New window',
-                    click: () => {
-                        createWindow();
-                    }
-                },
-                {
-                    type: 'separator',
-                },
-                {
-                    label: 'Close all windows',
-                    accelerator: 'CmdOrCtrl+e',
-                    click: ()=> {
-                        BrowserWindow.getAllWindows().forEach(window => { window.close() });
-                    }
-                }
+                {label: "Preferences", click: () => { }},
+                {label: "Open destination folder", click: () => { }}
+            ]},
+        {
+        label: 'File',
+            submenu: [
+                isMac ? { role: "close" } : { role: "quit" }
             ]}
     ];
     const menu = Menu.buildFromTemplate(menuTemplate);
@@ -59,11 +49,6 @@ function createWindow() {
 
 app.whenReady().then(() => {
     createWindow();
-    globalShortcut.register('CmdOrCtrl+d', () => {
-        console.log("Atalho global exectado")
-        BrowserWindow.getAllWindows()[0].setAlwaysOnTop(true)
-        BrowserWindow.getAllWindows()[0].setAlwaysOnTop(false)
-    })
 })
 
 app.on('will-quit', ()=> {
